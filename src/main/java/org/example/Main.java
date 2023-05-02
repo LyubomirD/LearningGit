@@ -6,5 +6,7 @@ public class Main {
         SecondClass secondClass = new SecondClass();
         secondClass.adding(1, 1);
         secondClass.text();
+
+        System.out.println("Hello conflict merge");
     }
 }
