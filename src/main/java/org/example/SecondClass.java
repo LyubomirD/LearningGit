@@ -1,6 +1,6 @@
 package org.example;
 
-public class SecondClass {
+public class SecondClass implements Interface {
 
     public int adding(int a, int b) {
         int c = a + b;
@@ -9,5 +9,11 @@ public class SecondClass {
 
     public String text() {
         return "Hello World";
+    }
+
+    @Override
+    public int multiplies(int a, int b) {
+        int c = a * b;
+        return c;
     }
 }
