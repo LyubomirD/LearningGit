@@ -16,4 +16,12 @@ public class SecondClass implements Interface {
         int g = a * b;
         return g;
     }
+
+    @Override
+    public int divide(int x, int y) {
+        int t = x / y;
+        return t;
+    }
+
+
 }

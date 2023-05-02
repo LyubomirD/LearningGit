@@ -1,0 +1,74 @@
+Index: src/main/java/org/example/Main.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package org.example;\n\npublic class Main {\n    public static void main(String[] args) {\n\n        SecondClass secondClass = new SecondClass();\n        secondClass.adding(1, 1);\n        secondClass.text();\n\n        System.out.println(\"Hello conflict merge\");\n    }\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/org/example/Main.java b/src/main/java/org/example/Main.java
+--- a/src/main/java/org/example/Main.java	(revision 1090ea703f0ffaff0a6aa8250ed036d019fdb4a4)
++++ b/src/main/java/org/example/Main.java	(date 1683042815823)
+@@ -7,6 +7,8 @@
+         secondClass.adding(1, 1);
+         secondClass.text();
+ 
++        secondClass.divide(8, 7);
++
+         System.out.println("Hello conflict merge");
+     }
+ }
+\ No newline at end of file
+Index: src/main/java/org/example/SecondClass.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package org.example;\n\npublic class SecondClass implements Interface {\n\n    public int adding(int a, int b) {\n        int c = a + b;\n        return c;\n    }\n\n    public String text() {\n        return \"Hello World\";\n    }\n\n    @Override\n    public int multiplies(int a, int b) {\n        int c = a * b;\n        return c;\n    }\n}\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/org/example/SecondClass.java b/src/main/java/org/example/SecondClass.java
+--- a/src/main/java/org/example/SecondClass.java	(revision 1090ea703f0ffaff0a6aa8250ed036d019fdb4a4)
++++ b/src/main/java/org/example/SecondClass.java	(date 1683042744465)
+@@ -16,4 +16,12 @@
+         int c = a * b;
+         return c;
+     }
++
++    @Override
++    public int divide(int x, int y) {
++        int t = x / y;
++        return t;
++    }
++
++
+ }
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"AutoImportSettings\">\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\n  </component>\n  <component name=\"ChangeListManager\">\n    <list default=\"true\" id=\"ebe4af38-5815-4d7d-a2db-0fc5c4342f8f\" name=\"Changes\" comment=\"\" />\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\n  </component>\n  <component name=\"FileTemplateManagerImpl\">\n    <option name=\"RECENT_TEMPLATES\">\n      <list>\n        <option value=\"Class\" />\n        <option value=\"Interface\" />\n      </list>\n    </option>\n  </component>\n  <component name=\"Git.Settings\">\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\n  </component>\n  <component name=\"MarkdownSettingsMigration\">\n    <option name=\"stateVersion\" value=\"1\" />\n  </component>\n  <component name=\"MavenImportPreferences\">\n    <option name=\"importingSettings\">\n      <MavenImportingSettings>\n        <option name=\"workspaceImportEnabled\" value=\"true\" />\n      </MavenImportingSettings>\n    </option>\n  </component>\n  <component name=\"ProjectId\" id=\"2PF3kLGzNmKdRyeENMxvzNqSYvw\" />\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\" />\n  <component name=\"ProjectViewState\">\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\n    <option name=\"showLibraryContents\" value=\"true\" />\n  </component>\n  <component name=\"PropertiesComponent\">{\n  &quot;keyToString&quot;: {\n    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,\n    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,\n    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,\n    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,\n    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,\n    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,\n    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,\n    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,\n    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;\n  }\n}</component>\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\n  <component name=\"TaskManager\">\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\n      <changelist id=\"ebe4af38-5815-4d7d-a2db-0fc5c4342f8f\" name=\"Changes\" comment=\"\" />\n      <created>1683039152962</created>\n      <option name=\"number\" value=\"Default\" />\n      <option name=\"presentableId\" value=\"Default\" />\n      <updated>1683039152962</updated>\n      <workItem from=\"1683039155111\" duration=\"2670000\" />\n    </task>\n    <servers />\n  </component>\n  <component name=\"TypeScriptGeneratedFilesManager\">\n    <option name=\"version\" value=\"3\" />\n  </component>\n  <component name=\"Vcs.Log.Tabs.Properties\">\n    <option name=\"TAB_STATES\">\n      <map>\n        <entry key=\"MAIN\">\n          <value>\n            <State />\n          </value>\n        </entry>\n      </map>\n    </option>\n  </component>\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 1090ea703f0ffaff0a6aa8250ed036d019fdb4a4)
++++ b/.idea/workspace.xml	(date 1683042745266)
+@@ -4,7 +4,10 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="ebe4af38-5815-4d7d-a2db-0fc5c4342f8f" name="Changes" comment="" />
++    <list default="true" id="ebe4af38-5815-4d7d-a2db-0fc5c4342f8f" name="Changes" comment="">
++      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/SecondClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/SecondClass.java" afterDir="false" />
++    </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+@@ -58,7 +61,7 @@
+       <option name="number" value="Default" />
+       <option name="presentableId" value="Default" />
+       <updated>1683039152962</updated>
+-      <workItem from="1683039155111" duration="2670000" />
++      <workItem from="1683039155111" duration="3013000" />
+     </task>
+     <servers />
+   </component>

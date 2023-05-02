@@ -9,6 +9,8 @@ public class Main {
         
         secondClass.divide(5, 1);
 
+        secondClass.divide(8, 7);
+
         System.out.println("Hello conflict merge");
     }
 }
