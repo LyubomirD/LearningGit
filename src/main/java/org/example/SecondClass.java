@@ -13,7 +13,7 @@ public class SecondClass implements Interface {
 
     @Override
     public int multiplies(int a, int b) {
-        int c = a * b;
-        return c;
+        int g = a * b;
+        return g;
     }
 }
