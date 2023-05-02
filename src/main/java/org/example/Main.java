@@ -2,6 +2,9 @@ package org.example;
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+
+        SecondClass secondClass = new SecondClass();
+        secondClass.adding(1, 1);
+        secondClass.text();
     }
 }
