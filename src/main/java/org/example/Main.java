@@ -7,10 +7,18 @@ public class Main {
         secondClass.adding(1, 1);
         secondClass.text();
         
-        secondClass.divide(5, 1);
+        
 
-        secondClass.divide(8, 7);
-
-        System.out.println("Hello conflict merge");
+        System.out.println(divideNum(4,2));
+        
+        
+        // we do not need secondClass for methods
+  
+    }
+    
+    public static int divideNum(int a, int b){
+        int c;
+        c = a / b;
+        return c;
     }
 }
