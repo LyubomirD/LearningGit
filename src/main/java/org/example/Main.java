@@ -11,6 +11,12 @@ public class Main {
 
         secondClass.divide(8, 7);
 
-        System.out.println("Hello conflict merge");
+        System.out.println(add(5, 2));
+    }
+
+    public static int add(int b, int a) {
+        int t;
+        t = b + a;
+        return t;
     }
 }
