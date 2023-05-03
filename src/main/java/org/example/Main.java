@@ -9,20 +9,25 @@ public class Main {
 
         System.out.println(add(5, 2));
 
-        //Local repo
-        System.out.println(multiplyNum(1,2,4));
+        //Remote repo + Local now
+        //here will accure merge conflict
+        if (multiplyNum(4,2, 1) > 5){
+            System.out.println("Great");
+        }else{
+            System.out.println("Bad");
+        }
     }
 
-    public static int add(int b, int a) {
-        int t;
-        t = b + a;
-        return t;
-    }
-
-    //Local repo
-    public static int multiplyNum(int a, int b, int c){
+    //Local repo + Remote repo
+    public static int multiplyNum(int a, int b, int c) {
         int t;
         t = a * b * c;
         return t;
-    }
+        }
+
+        public static int add(int b, int a) {
+            int t;
+            t = b + a;
+            return t;
+        }
 }
