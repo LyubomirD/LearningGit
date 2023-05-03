@@ -8,7 +8,9 @@ public class Main {
         secondClass.text();
 
         System.out.println(add(5, 2));
-        System.out.println(divideNum(4,2));
+
+        //Local repo
+        System.out.println(multiplyNum(1,2,4));
     }
 
     public static int add(int b, int a) {
@@ -16,12 +18,11 @@ public class Main {
         t = b + a;
         return t;
     }
-    
-    public static int divideNum(int a, int b){
-        int c;
-        c = a / b;
-        return c;
-    }
 
-    //solved merge conflict after merging branches ?
+    //Local repo
+    public static int multiplyNum(int a, int b, int c){
+        int t;
+        t = a * b * c;
+        return t;
+    }
 }
