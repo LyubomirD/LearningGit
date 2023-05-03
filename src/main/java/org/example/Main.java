@@ -9,6 +9,7 @@ public class Main {
 
         System.out.println(add(5, 2));
         
+        //Remote repo
         //here will accure merge conflict
         if (multiplyNum(4,2) > 5){
             System.out.println("Great");
@@ -25,6 +26,7 @@ public class Main {
         return t;
     }
     
+    //Remote repo
     // here will accure merge conflict too
     public static int multiplyNum(int a, int b){
         int c;
