@@ -8,7 +8,15 @@ public class Main {
         secondClass.text();
 
         System.out.println(add(5, 2));
-        System.out.println(divideNum(4,2));
+        
+        //here will accure merge conflict
+        if (multiplyNum(4,2) > 5){
+            System.out.println("Great");
+        }else{
+            System.out.println("Bad");
+        }
+        
+        
     }
 
     public static int add(int b, int a) {
@@ -17,11 +25,10 @@ public class Main {
         return t;
     }
     
-    public static int divideNum(int a, int b){
+    // here will accure merge conflict too
+    public static int multiplyNum(int a, int b){
         int c;
-        c = a / b;
+        c = a * b;
         return c;
     }
-
-    //solved merge conflict after merging branches ?
 }
