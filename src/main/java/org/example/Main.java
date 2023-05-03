@@ -6,12 +6,9 @@ public class Main {
         SecondClass secondClass = new SecondClass();
         secondClass.adding(1, 1);
         secondClass.text();
-        
-        secondClass.divide(5, 1);
-
-        secondClass.divide(8, 7);
 
         System.out.println(add(5, 2));
+        System.out.println(divideNum(4,2));
     }
 
     public static int add(int b, int a) {
@@ -19,4 +16,12 @@ public class Main {
         t = b + a;
         return t;
     }
+    
+    public static int divideNum(int a, int b){
+        int c;
+        c = a / b;
+        return c;
+    }
+
+    //solved merge conflict after merging branches ?
 }
